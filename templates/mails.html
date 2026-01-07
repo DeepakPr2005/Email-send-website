@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card" style="margin:30px;">
+    <h2>Sent Mails</h2>
+
+    <table border="1" width="100%" cellpadding="8">
+        <tr>
+            <th>Email</th>
+            <th>Subject</th>
+        </tr>
+        {% for mail in mails %}
+        <tr>
+            <td>{{ mail[0] }}</td>
+            <td>{{ mail[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

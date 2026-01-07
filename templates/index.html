@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="card">
+        <h2>Send Resume to HR</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <input
+                type="email"
+                name="email"
+                placeholder="HR Email"
+                required
+            >
+
+            <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+            >
+
+            <textarea
+                name="message"
+                rows="20"
+                placeholder="Message"
+                required
+            ></textarea>
+
+            <input
+                type="file"
+                name="resume"
+                accept=".pdf"
+                required
+            >
+
+            <button type="submit">Send Email</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

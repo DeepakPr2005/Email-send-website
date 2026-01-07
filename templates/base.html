@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resume Mailer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='theme.js') }}"></script>
+</head>
+
+<body data-theme="dark">
+
+<nav>
+    <b>Resume Mailer</b>
+    <a href="{{ url_for('index') }}">Home</a>
+    <a href="{{ url_for('mails') }}">Sent Mails</a>
+    <button onclick="toggleTheme()">🌙</button>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
