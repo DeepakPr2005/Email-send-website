@@ -67,7 +67,7 @@ def index():
                 filename=filename
             )
 
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=20) as server::
+        with smtplib.SMTP("smtp.gmail.com", 587, timeout=20) as server:
             server.starttls()
             server.login(SENDER_EMAIL, APP_PASSWORD)
             server.send_message(msg)
