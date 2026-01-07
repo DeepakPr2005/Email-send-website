@@ -104,3 +104,5 @@ wrapt==2.0.1
 xgboost==3.1.2
 gunicorn
 
+python-dotenv
+
